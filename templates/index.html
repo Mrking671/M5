@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Movies</title>
+    <style>
+        body { background-color: #141414; color: #fff; font-family: Arial, sans-serif; }
+        .movie-container { display: flex; flex-wrap: wrap; }
+        .movie { margin: 10px; }
+        .movie img { width: 200px; border-radius: 8px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>My Movies</h1>
+    <div class="movie-container">
+        {% for movie in movies %}
+        <div class="movie">
+            <a href="/movie/{{ movie.id }}">
+                <img src="/{{ movie.poster_path }}" alt="{{ movie.title }}">
+            </a>
+            <p>{{ movie.title }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
