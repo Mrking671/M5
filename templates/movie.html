@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie.title }}</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: Arial, sans-serif; text-align: center; }
+        video { width: 80%; max-width: 800px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <video controls poster="/{{ movie.poster_path }}">
+        <source src="/{{ movie.file_path }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
